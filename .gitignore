@@ -1,0 +1,9 @@
+__pycache__
+.env
+.history
+.hypothesis/
+build/
+reports/
+ipl-imgs/
+ipl-gifs/
+metadata/*.json
