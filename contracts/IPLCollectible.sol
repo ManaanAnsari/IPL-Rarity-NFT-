@@ -6,6 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
+import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 
 
 contract IPLCollectible is ERC721URIStorage,VRFConsumerBase,Ownable {
