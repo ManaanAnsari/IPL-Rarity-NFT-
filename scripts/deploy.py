@@ -23,6 +23,7 @@ def deploy():
         config["networks"][network.show_active()]["keyhash"],
         config["networks"][network.show_active()]["fee"],
         uris,
+        get_contract("weth"),
         {"from": account},
     )
     fund_with_link(iplContract.address)

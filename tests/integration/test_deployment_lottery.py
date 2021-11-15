@@ -32,3 +32,5 @@ def test_can_create_IPLCollectibles():
     assert IPLContract.tokenCounter() == len(get_uris())
     assert IPLContract.randomlyAssigned(random_number % len(get_uris())) == True
 
+def test_royalty():
+    pass

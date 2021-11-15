@@ -35,7 +35,7 @@ def main():
                 print(f"{metadata_file_name} already exists! Delete it to overwrite")
             else:
                 print(f"Creating Metadata file: {metadata_file_name}")
-                collectible_metadata["name"] = player_name.replace('_',"").replace('.gif',"")
+                collectible_metadata["name"] = player_name.replace('_'," ").replace('.gif',"").replace('IPL',"")
                 collectible_metadata["description"] = f"{team_name}!"
                 collectible_metadata["attributes"][0]["value"] = team_name
                 image_uri = f"https://ipfs.io/ipfs/{meta_up_data['IpfsHash']}?filename={player_name}"

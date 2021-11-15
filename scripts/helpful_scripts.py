@@ -1,4 +1,4 @@
-from brownie import accounts, network, config, LinkToken, VRFCoordinatorMock, Contract
+from brownie import accounts, network, config, LinkToken, VRFCoordinatorMock, Contract, WETH
 from web3 import Web3
 import json
 from pathlib import Path
@@ -64,6 +64,8 @@ def deploy_mocks():
     print("Deploying Mock VRF Coordinator...")
     vrf_coordinator = VRFCoordinatorMock.deploy(link_token.address, {"from": account})
     print(f"VRFCoordinator deployed to {vrf_coordinator.address}")
+    weth = WETH.deploy({"from": account})
+    print(f"WETH deployed to {weth.address}")
     print("All done!")
 
 
@@ -86,7 +88,7 @@ def get_uris():
             for  filename, _meta in metadata.items():
                 uri ="https://ipfs.io/ipfs/"+_meta["IpfsHash"]+"?filename="+filename
                 uris.append(uri)
-    return uris
+    return uris[:15]
 
 
 
